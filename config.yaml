@@ -1,32 +1,451 @@
-payload:
-  - DOMAIN,api.steampowered.com
-  - DOMAIN,store.steampowered.com
-  - DOMAIN-SUFFIX,fanatical.com
-  - DOMAIN-SUFFIX,humblebundle.com
-  - DOMAIN-SUFFIX,steam-chat.com
-  - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net
-  - DOMAIN-SUFFIX,steamcommunity.com
-  - DOMAIN-SUFFIX,steamcontent.com
-  - DOMAIN-SUFFIX,steamgames.com
-  - DOMAIN-SUFFIX,steamstat.us
-  - DOMAIN-SUFFIX,steamstatic.com
-  - DOMAIN-SUFFIX,steamusercontent.com
-  - DOMAIN-SUFFIX,epicgames.com
-  - DOMAIN-SUFFIX,ol.epicgames.com
-  - DOMAIN-SUFFIX,helpshift.com
-  - DOMAIN-SUFFIX,paragon.com
-  - DOMAIN-SUFFIX,unrealengine.com
-  - DOMAIN,public-ubiservices.ubi.com
-  - DOMAIN,static3.cdn.ubi.com
-  - DOMAIN,ubisoft-uplay-savegames.s3.amazonaws.com
-  - DOMAIN,ubisoft-orbit-savegames.s3.amazonaws.com
-  - DOMAIN,public-im-ubiservices.ubi.com
-  - DOMAIN,msr-public-ubiservices.ubi.com
-  - DOMAIN,public-ws.aws-ubiservices.ubi.com
-  - DOMAIN,public.aws-ubiservices.ubi.com
-  - DOMAIN,public-ws-ubiservices.ubi.com
-  - DOMAIN,api-ubiservices.ubi.com
-  - DOMAIN,lb-upc-dmx.ubisoft.com
-  - DOMAIN,msr-api-ubiservices.ubi.com
-  - DOMAIN,dmx.upc.ubisoft.com
+- Clash:zwBO3Z08
+rule-providers:
+  Reject:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Reject.yaml
+    path: "./rule_provider/Reject"
+    interval: 86400
+  Special:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Special.yaml
+    path: "./rule_provider/Special"
+    interval: 86400
+  Netflix:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Netflix.yaml
+    path: "./rule_provider/Netflix"
+    interval: 86400
+  Spotify:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Spotify.yaml
+    path: "./rule_provider/Spotify"
+    interval: 86400
+  YouTube:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/YouTube.yaml
+    path: "./rule_provider/YouTube"
+    interval: 86400
+  Bilibili:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Bilibili.yaml
+    path: "./rule_provider/Bilibili"
+    interval: 86400
+  IQ:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/IQ.yaml
+    path: "./rule_provider/IQI"
+    interval: 86400
+  IQIYI:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/IQIYI.yaml
+    path: "./rule_provider/IQYI"
+    interval: 86400
+  Letv:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Letv.yaml
+    path: "./rule_provider/Letv"
+    interval: 86400
+  Netease Music:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Netease%20Music.yaml
+    path: "./rule_provider/Netease_Music"
+    interval: 86400
+  Tencent Video:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Tencent%20Video.yaml
+    path: "./rule_provider/Tencent_Video"
+    interval: 86400
+  Youku:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Youku.yaml
+    path: "./rule_provider/Youku"
+    interval: 86400
+  WeTV:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/WeTV.yaml
+    path: "./rule_provider/WeTV"
+    interval: 86400
+  ABC:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/ABC.yaml
+    path: "./rule_provider/ABC"
+    interval: 86400
+  Abema TV:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Abema%20TV.yaml
+    path: "./rule_provider/Abema_TV"
+    interval: 86400
+  Amazon:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Amazon.yaml
+    path: "./rule_provider/Amazon"
+    interval: 86400
+  Apple Music:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Apple%20Music.yaml
+    path: "./rule_provider/Apple_Music"
+    interval: 86400
+  Apple News:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Apple%20News.yaml
+    path: "./rule_provider/Apple_News"
+    interval: 86400
+  Apple TV:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Apple%20TV.yaml
+    path: "./rule_provider/Apple_TV"
+    interval: 86400
+  Bahamut:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Bahamut.yaml
+    path: "./rule_provider/Bahamut"
+    interval: 86400
+  BBC iPlayer:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/BBC%20iPlayer.yaml
+    path: "./rule_provider/BBC_iPlayer"
+    interval: 86400
+  DAZN:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/DAZN.yaml
+    path: "./rule_provider/DAZN"
+    interval: 86400
+  Discovery Plus:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Discovery%20Plus.yaml
+    path: "./rule_provider/Discovery_Plus"
+    interval: 86400
+  Disney Plus:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Disney%20Plus.yaml
+    path: "./rule_provider/Disney_Plus"
+    interval: 86400
+  encoreTVB:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/encoreTVB.yaml
+    path: "./rule_provider/encoreTVB"
+    interval: 86400
+  F1 TV:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/F1%20TV.yaml
+    path: "./rule_provider/F1_TV"
+    interval: 86400
+  Fox Now:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Fox%20Now.yaml
+    path: "./rule_provider/Fox_Now"
+    interval: 86400
+  Fox+:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Fox%2B.yaml
+    path: "./rule_provider/Fox+"
+    interval: 86400
+  HBO Go:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/HBO%20Go.yaml
+    path: "./rule_provider/HBO_Go"
+    interval: 86400
+  HBO Max:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/HBO%20Max.yaml
+    path: "./rule_provider/HBO_Max"
+    interval: 86400
+  Hulu Japan:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Hulu%20Japan.yaml
+    path: "./rule_provider/Hulu_Japan"
+    interval: 86400
+  Hulu:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Hulu.yaml
+    path: "./rule_provider/Hulu"
+    interval: 86400
+  Japonx:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Japonx.yaml
+    path: "./rule_provider/Japonx"
+    interval: 86400
+  JOOX:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/JOOX.yaml
+    path: "./rule_provider/JOOX"
+    interval: 86400
+  KKBOX:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/KKBOX.yaml
+    path: "./rule_provider/KKBOX"
+    interval: 86400
+  KKTV:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/KKTV.yaml
+    path: "./rule_provider/KKTV"
+    interval: 86400
+  Line TV:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Line%20TV.yaml
+    path: "./rule_provider/Line_TV"
+    interval: 86400
+  myTV SUPER:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/myTV%20SUPER.yaml
+    path: "./rule_provider/myTV_SUPER"
+    interval: 86400
+  Niconico:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Niconico.yaml
+    path: "./rule_provider/Niconico"
+    interval: 86400
+  Pandora:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Pandora.yaml
+    path: "./rule_provider/Pandora"
+    interval: 86400
+  PBS:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/PBS.yaml
+    path: "./rule_provider/PBS"
+    interval: 86400
+  Pornhub:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Pornhub.yaml
+    path: "./rule_provider/Pornhub"
+    interval: 86400
+  Soundcloud:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/Soundcloud.yaml
+    path: "./rule_provider/Soundcloud"
+    interval: 86400
+  ViuTV:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Media/ViuTV.yaml
+    path: "./rule_provider/ViuTV"
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Telegram.yaml
+    path: "./rule_provider/Telegram"
+    interval: 86400
+  Crypto:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Crypto.yaml
+    path: "./rule_provider/Crypto"
+    interval: 86400
+  Discord:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Discord.yaml
+    path: "./rule_provider/Discord"
+    interval: 86400
+  Steam:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Steam.yaml
+    path: "./rule_provider/Steam"
+    interval: 86400
+  Speedtest:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Speedtest.yaml
+    path: "./rule_provider/Speedtest"
+    interval: 86400
+  PayPal:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/PayPal.yaml
+    path: "./rule_provider/PayPal"
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Microsoft.yaml
+    path: "./rule_provider/Microsoft"
+    interval: 86400
+  ChatGPT:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/ChatGPT.yaml
+    path: "./rule_provider/ChatGPT"
+    interval: 86400
+  PROXY:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Proxy.yaml
+    path: "./rule_provider/Proxy"
+    interval: 86400
+  Domestic:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Domestic.yaml
+    path: "./rule_provider/Domestic"
+    interval: 86400
+  Apple:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Apple.yaml
+    path: "./rule_provider/Apple"
+    interval: 86400
+  Google FCM:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Google%20FCM.yaml
+    path: "./rule_provider/Google FCM"
+    interval: 86400
+  Scholar:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Scholar.yaml
+    path: "./rule_provider/Scholar"
+    interval: 86400
+  Domestic IPs:
+    type: http
+    behavior: ipcidr
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Domestic%20IPs.yaml
+    path: "./rule_provider/Domestic_IPs"
+    interval: 86400
+  LAN:
+    type: http
+    behavior: classical
+    url: https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/LAN.yaml
+    path: "./rule_provider/LAN"
+    interval: 86400
+  游戏平台(MO):
+    type: file
+    behavior: domain
+    path: "./rule_provider/Steam"
+script:
+  code: |
+    def main(ctx, metadata):
+        ruleset_action = {"Reject": "REJECT",
+            "Special": "DIRECT",
+            "Netflix": "♻️ 手动切换",
+            "Spotify": "♻️ 手动切换",
+            "YouTube": "♻️ 手动切换",
+            "Disney Plus": "♻️ 手动切换",
+            "Bilibili": "DIRECT",
+            "IQ": "♻️ 手动切换",
+            "IQIYI": "♻️ 手动切换",
+            "Letv": "♻️ 手动切换",
+            "Netease Music": "♻️ 手动切换",
+            "Tencent Video": "♻️ 手动切换",
+            "Youku": "♻️ 手动切换",
+            "WeTV": "♻️ 手动切换",
+            "ABC": "♻️ 手动切换",
+            "Abema TV": "♻️ 手动切换",
+            "Amazon": "♻️ 手动切换",
+            "Bahamut": "♻️ 手动切换",
+            "BBC iPlayer": "♻️ 手动切换",
+            "DAZN": "♻️ 手动切换",
+            "Discovery Plus": "♻️ 手动切换",
+            "encoreTVB": "♻️ 手动切换",
+            "F1 TV": "♻️ 手动切换",
+            "Fox Now": "♻️ 手动切换",
+            "Fox+": "♻️ 手动切换",
+            "HBO Go": "♻️ 手动切换",
+            "HBO Max": "♻️ 手动切换",
+            "Hulu Japan": "♻️ 手动切换",
+            "Hulu": "♻️ 手动切换",
+            "Japonx": "♻️ 手动切换",
+            "JOOX": "♻️ 手动切换",
+            "KKBOX": "♻️ 手动切换",
+            "KKTV": "♻️ 手动切换",
+            "Line TV": "♻️ 手动切换",
+            "myTV SUPER": "♻️ 手动切换",
+            "Niconico": "♻️ 手动切换",
+            "Pandora": "♻️ 手动切换",
+            "PBS": "♻️ 手动切换",
+            "Pornhub": "♻️ 手动切换",
+            "Soundcloud": "♻️ 手动切换",
+            "ViuTV": "♻️ 手动切换",
+            "Telegram": "♻️ 手动切换",
+            "Crypto": "♻️ 手动切换",
+            "Discord": "♻️ 手动切换",
+            "Steam": "♻️ 手动切换",
+            "Speedtest": "DIRECT",
+            "PayPal": "♻️ 手动切换",
+            "Microsoft": "♻️ 手动切换",
+            "ChatGPT": "♻️ 手动切换",
+            "Apple Music": "♻️ 手动切换",
+            "Apple News": "♻️ 手动切换",
+            "Apple TV": "♻️ 手动切换",
+            "Apple": "♻️ 手动切换",
+            "Google FCM": "♻️ 手动切换",
+            "Scholar": "♻️ 手动切换",
+            "PROXY": "♻️ 手动切换",
+            "Domestic": "DIRECT",
+            "Domestic IPs": "DIRECT",
+            "LAN": "DIRECT"
+          }
+
+        port = int(metadata["dst_port"])
+
+        if metadata["network"] == "UDP" and port == 443:
+            ctx.log('[Script] matched QUIC traffic use reject')
+            return "REJECT"
+
+        port_list = [21, 22, 23, 53, 80, 123, 143, 194, 443, 465, 587, 853, 993, 995, 998, 2052, 2053, 2082, 2083, 2086, 2095, 2096, 3389, 5222, 5228, 5229, 5230, 8080, 8443, 8880, 8888, 8889]
+        if port not in port_list:
+            ctx.log('[Script] not common port use direct')
+            return "DIRECT"
+
+        if metadata["dst_ip"] == "":
+            metadata["dst_ip"] = ctx.resolve_ip(metadata["host"])
+
+        for ruleset in ruleset_action:
+            if ctx.rule_providers[ruleset].match(metadata):
+                return ruleset_action[ruleset]
+
+        if metadata["dst_ip"] != "":
+            code = ctx.geoip(metadata["dst_ip"])
+            if code == "CN":
+                ctx.log('[Script] Geoip CN')
+                return "DIRECT"
+
+        ctx.log('[Script] FINAL')
+        return "DIRECT"
   
